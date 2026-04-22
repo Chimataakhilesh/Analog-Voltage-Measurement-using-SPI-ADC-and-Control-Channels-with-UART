@@ -23,6 +23,15 @@ Voltage values are read from the MCP3204, processed by the LPC2129 microcontroll
 - Wires / breadboard / PCB
 
 ---
+## Working Princple
+- Waiting for channel selection from (0 to 3) through UART
+  <img width="450" height="251" alt="channelNo" src="https://github.com/user-attachments/assets/da165520-c66b-41ef-a3d4-24393505c841" />
+- After channel selection the ADC value is displayed in LCD
+  <img width="273" height="135" alt="channel0" src="https://github.com/user-attachments/assets/23d68d25-3004-4738-ae3f-43a0b933e0b8" />
+- If wrong channel is seleted invalid message will shown
+  <img width="435" height="240" alt="invalid" src="https://github.com/user-attachments/assets/652d6c0c-5885-433f-8e2c-d6403eebb656" />
+
+
 
 ## MCP3204 quick facts
 - 12-bit resolution (0..4095)
@@ -170,6 +179,10 @@ Make sure your LPC2129 startup code, linker script, and vector table are configu
 - Use proper protection (input clamping, resistor dividers) if measuring signals outside MCU/ADC range.
 
 ---
+## Schematic Capture
+  <img width="1208" height="840" alt="Capture" src="https://github.com/user-attachments/assets/ed6647e2-274f-440f-8a5d-05b73334a84d" />
+
+
 
 ## References
 - MCP3204 Datasheet: https://ww1.microchip.com/downloads/en/DeviceDoc/21291b.pdf
