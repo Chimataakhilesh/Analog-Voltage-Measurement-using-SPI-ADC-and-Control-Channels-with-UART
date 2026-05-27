@@ -206,7 +206,7 @@ void SPI_INIT(void)
 
 	S0SPCCR = 150;  // SPI clock prescaler
 
-	S0SPCR = ((1<<MSTR_BIT)|Mode_3); // Master + Mode 3
+	S0SPCR = ((1<<MSTR_BIT)|(Mode_3<<3)); // Master + Mode 3
 }
 
 // UART Transmit One Byte
